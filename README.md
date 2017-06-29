@@ -14,7 +14,7 @@ cmsenv
 # clone repository  
 mkdir HCALPFG  
 cd HCALPFG  
-git clone -b git@github.com:HCALPFG/HcalTupleAnalyzerExample.git  
+git clone git@github.com:HCALPFG/HcalTupleAnalyzerExample.git  
 ```
 
 ## To run
