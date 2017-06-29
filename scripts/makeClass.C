@@ -1,6 +1,6 @@
 void makeClass() {
   // choose file to make class from
-  TFile *f = TFile::Open("root://cmseos.fnal.gov//store/user/abuccill/hcal-analysis/hf_phase_settings_2017/hcal_pfg_ZeroBias_Run2017A-v1_RAW_fill_5822_merged.root");
+  TFile *f = TFile::Open("HcalTupleMaker_output.root");
   
   // list the contents of this file
   f->ls();
