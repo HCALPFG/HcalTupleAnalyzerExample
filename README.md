@@ -23,6 +23,19 @@ git clone git@github.com:HCALPFG/HcalTupleAnalyzerExample.git
 cd HCALPFG/HcalTupleAnalyzerExample  
 cmsenv  
 
-# obtain grid proxy (optional)  
-voms-proxy-init -voms cms -rfc  
+# Specify location to HcalTupleMaker ntuples  
+## replace HcalTupleMaker_output.root with correct filename  
+## in `scripts/makeClass.C` and `analysis/process_events.C`   
+
+# run TTree::MakeClass() over your HcalTupleMaker ntuples  
+cd HcalTupleAnalyzerExample/scripts  
+./make_class.sh  
+
+# run HcalPfgStudies.C  
+cd HcalTupleAnalyzerExample/analysis  
+root -l -q -b process_events.C  
+
+# plot histograms  
+cd HcalTupleAnalyzerExample/plots  
+root -l -q -b plot_hf.C  
 ```
